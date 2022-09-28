@@ -1,0 +1,32 @@
+﻿<MudThemeProvider Theme="JazzJuneTheme" />
+
+@code{
+    MudTheme JazzJuneTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Teal.Darken4,
+            Secondary = Colors.Indigo.Default,
+            AppbarBackground = Colors.Teal.Darken4,
+            AppbarText = Colors.Shades.White
+        },
+        PaletteDark = new Palette()
+        {
+            Primary = Colors.Indigo.Lighten1,
+            AppbarText = Colors.Shades.Black
+        },
+        LayoutProperties = new LayoutProperties()
+        {
+            DrawerWidthLeft = "260px",
+            DrawerWidthRight = "300px"
+        },
+        Typography = new Typography()
+        {
+            Default = new Default()
+            {
+                FontFamily = new[] { "Century Schoolbook BT Monospace", "Helvetica", "Arial", "sans-serif" }
+            }
+
+        }
+    };
+}

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Century Schoolbook BT Monospace';
+    src:
+        url("../fonts/CenturySchoolbookBT-Monospace.woff") format("woff"), 
+        url("../fonts/CenturySchoolbookBT-Monospace.ttf") format("truetype"),
+        url("../fonts/CenturySchoolbookBT-Monospace.otf") format("opentype"),
+        url("../fonts/CenturySchoolbookBT-Monospace.woff2") format("woff2");
+    
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,46 @@
+﻿@page "/shop"
+
+@inject HttpClient _http
+@inject NavigationManager _navigationManager
+
+<PageTitle>Jazz June Wines Shop</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Shop</MudText>
+<MudGrid>
+    @if(_products.Count() is 0)
+    {
+        <MudItem xs="12">
+            <MudCard>
+                <MudCardContent>
+                    <MudText Typo="Typo.h1" Align="Align.Center">Coming soon!</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    }
+    @foreach(Product product in _products)
+    {
+        <MudItem xs="4">
+            <MudCard>
+                <MudCardMedia Image="@(string.IsNullOrEmpty(product.ImageUrl) ? "images/bottle-default.png" : product.ImageUrl)" Height="200" Style="background-size: contain;"/>
+                <MudCardContent>
+                    <MudText Typo="Typo.h5">@product.Name</MudText>
+                    <MudText Typo="Typo.body2">@product.Description</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Right" Color="Color.Primary" Style="font-weight: bold">$ @product.Price</MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Primary">Add to Cart</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    }
+</MudGrid>
+<MudButton Variant="Variant.Filled" Color="Color.Primary" Class="my-6" OnClick="GoToCheckout" Disabled="_products.Count() is 0">Checkout</MudButton>
+
+@code {
+    private IEnumerable<Product> _products = new List<Product>();
+
+    private void GoToCheckout()
+    {
+        _navigationManager.NavigateTo($"checkout");
+    }
+}

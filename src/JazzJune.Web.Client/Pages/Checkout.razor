@@ -1,0 +1,75 @@
+﻿@page "/checkout"
+
+<PageTitle>Jazz June Wines Checkout</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Checkout</MudText>
+<MudGrid Spacing="6">
+    <MudItem xs="7">
+        <MudText Typo="Typo.h5" GutterBottom="true">Billing address</MudText>
+        <MudGrid>
+            <MudItem xs="12">
+                <MudTextField T="string" Label="Email" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudTextField T="string" Label="Mobile number" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudTextField T="string" Label="Personal number" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField T="string" Label="First name" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField T="string" Label="Last name" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudTextField T="string" Label="Address" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField T="string" Label="Postal code" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField T="string" Label="Postal Area" />
+            </MudItem>
+            <MudItem xs="12" Class="d-flex justify-center">
+                <MudButton Variant="Variant.Filled" DisableElevation="true" Color="Color.Primary" Size="Size.Large" Class="mt-8">Continue to Payment</MudButton>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+    <MudItem xs="5">
+        <MudText Typo="Typo.h5" GutterBottom="true">Cart</MudText>
+        <MudPaper Class="d-flex flex-column" Outlined="true">
+            <MudList Clickable="true">
+                <MudListItem>
+                    <div class="d-flex">
+                        <MudText>Yarra Valley 2022 Chardonnay</MudText>
+                        <MudText Inline="true" Class="ml-auto">$35</MudText>
+                    </div>
+                </MudListItem>
+                <MudListItem>
+                    <div class="d-flex">
+                        <MudText>Yarra Valley 2023 Rose</MudText>
+                        <MudText Class="ml-auto">$30</MudText>
+                    </div>
+                </MudListItem>
+                <MudListItem>
+                    <div class="d-flex">
+                        <MudText>Yarra Valley 2023 Pinot Noir</MudText>
+                        <MudText Class="ml-auto">$30</MudText>
+                    </div>
+                </MudListItem>
+            </MudList>
+            <div class="mt-auto">
+                <MudDivider />
+                <div class="d-flex pa-4">
+                    <MudText>Total:</MudText>
+                    <MudText Class="ml-auto"><b>$100</b></MudText>
+                </div>
+            </div>
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+
+@code {
+
+}

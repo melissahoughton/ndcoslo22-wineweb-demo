@@ -1,0 +1,39 @@
+﻿@inherits LayoutComponentBase
+
+<CustomTheme />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout Class="d-flex flex-column" Style="min-height: 100vh;">
+    <MudAppBar Elevation="0">
+        <NavMenu />
+    </MudAppBar>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="my-8">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+    <footer class="mud-appbar mud-elevation-0 mud-theme-primary">
+        <div class="align-self-center">            
+            <MudIconButton Icon="@Icons.Custom.Brands.Instagram" Color="Color.Inherit" Link="https://www.instagram.com/jazzjunewines/" Target="_blank" />
+        </div>
+        <div class="align-self-center">
+            <MudText Typo="Typo.caption" Align="Align.Center" Class="d-block">
+                Jazz June Wines.
+                Yarra Valley, Victoria
+                Australia
+
+                ABN. 84973067016
+            </MudText>
+        </div>
+    </footer>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = false;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
