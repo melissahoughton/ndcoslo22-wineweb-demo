@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzJune.Web.Client", "Jazz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzJune.Web.Data", "JazzJune.Web.Data\JazzJune.Web.Data.csproj", "{21C2CBEF-E569-4FF8-9EAC-94FB5A0823D6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzJune.Web.Api", "JazzJune.Web.Api\JazzJune.Web.Api.csproj", "{F1BC9ADD-E8BB-48DE-8EB3-282863CDB971}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{21C2CBEF-E569-4FF8-9EAC-94FB5A0823D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21C2CBEF-E569-4FF8-9EAC-94FB5A0823D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21C2CBEF-E569-4FF8-9EAC-94FB5A0823D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BC9ADD-E8BB-48DE-8EB3-282863CDB971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BC9ADD-E8BB-48DE-8EB3-282863CDB971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BC9ADD-E8BB-48DE-8EB3-282863CDB971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BC9ADD-E8BB-48DE-8EB3-282863CDB971}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
